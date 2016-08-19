@@ -26,7 +26,7 @@ class PipelineConfig:
     def get_email_notif(self, pipeline_name):
         for config_dict in self.pipelines["pipelines"]:
             if pipeline_name == config_dict["name"]:
-                return config_dict.get('email_notifications', False)
+                return config_dict.get('email_notifications', True)
         return None
 
 _pipeline_config = None
